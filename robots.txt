@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ton198777.github.io/rotating-tools/sitemap.xml
