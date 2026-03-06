@@ -46,7 +46,7 @@ function calcMHeadToBar(){
   const sg = num('sg');
   if(!(head >= 0) || !(sg > 0)) return setError('notice','Enter valid head and specific gravity.');
   setError('notice','');
-  const bar = (head * sg * 9.80665)/100000;
+  const bar = (head * sg * 9.80665*1000)/100000;
   setText('res1', format(bar,5,' bar'));
   setText('res2', format(bar*14.5037738,3,' psi'));
   setText('res3', format(bar*100,2,' kPa'));
