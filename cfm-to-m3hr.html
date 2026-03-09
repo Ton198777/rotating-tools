@@ -1,60 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CFM to m3/hr Converter | Engineering Calculator</title>
-<meta name="description" content="Convert airflow from CFM to cubic meters per hour using an engineering calculator.">
-
-<meta name="robots" content="index, follow">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CFM to m³/hr Converter | Engineering Calculator</title>
+  <meta name="description" content="Convert volumetric flow from CFM to m³/hr and related SI units." />
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-badge">RT</span>
+        <span>Rotating Tools</span>
+      </a>
+      <button class="nav-toggle" onclick="toggleNav()">Menu</button>
+      <nav class="nav-links">
+        <a data-nav-link href="index.html">Home</a>
+<a data-nav-link href="bar-to-psi.html">bar → psi</a>
+<a data-nav-link href="psi-to-bar.html">psi → bar</a>
+<a data-nav-link href="m-head-to-bar.html">m head → bar</a>
+<a data-nav-link href="cfm-to-m3hr.html">CFM → m³/hr</a>
+<a data-nav-link href="pump-power.html">Pump power</a>
+<a data-nav-link href="pump-head-to-pressure.html">Head → pressure</a>
+<a data-nav-link href="npsh.html">NPSH</a>
+<a data-nav-link href="pressure-drop.html">Pressure drop</a>
+<a data-nav-link href="reynolds-number.html">Reynolds</a>
+<a data-nav-link href="torque.html">Torque</a>
+      </nav>
+    </div>
+  </header>
+  
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="card hero-main">
+        <div class="badges">
+          <span class="badge">Engineering tool</span>
+          <span class="badge">SEO-ready page</span>
+          <span class="badge">Ad-friendly layout</span>
+        </div>
+        <h1>CFM to m³/hr converter</h1>
+        <p>Convert flow from cubic feet per minute to cubic meters per hour, per minute, and per second.</p>
+        <div class="kpis">
+          <div class="kpi"><strong>1 page</strong><span>1 keyword focus</span></div>
+          <div class="kpi"><strong>3 zones</strong><span>Ads placement ready</span></div>
+          <div class="kpi"><strong>Fast</strong><span>Static HTML + JS</span></div>
+        </div>
+      </div>
+      <aside class="card hero-side">
+        <div class="ad-slot">Hero banner placeholder<br/>Recommended: responsive display ad</div>
+        <div class="side-list">
+          <a href="#calculator">Go to calculator</a>
+          <a href="#formula">View formula</a>
+          <a href="#example">See worked example</a>
+        </div>
+      </aside>
+    </div>
+  </section>
 
-<h1>CFM to m³/hr Converter</h1>
+  <section class="page">
+    <div class="container page-grid">
+      <main class="content">
+        <section class="card section" id="calculator">
+          <h2>Online calculator</h2>
+          <div class="grid-2">
+            
+            <div class="field"><label for="cfm">Flow (CFM)</label><input id="cfm" type="number" step="any" value="1000" /></div>
+            <div class="field"><label>Engineering note</label><input value="Dry gas basis and actual/standard basis must be checked separately" readonly /></div>
+            
+          </div>
+          <div class="actions">
+            <button class="btn btn-primary" onclick="calcCfmToM3hr()">Calculate</button>
+          </div>
+          <div class="notice" id="notice"></div>
+          <div class="result-grid" style="margin-top:12px">
+            <div class="metric"><div class="k">m³/hr</div><div class="v" id="res1">-</div></div><div class="metric"><div class="k">m³/min</div><div class="v" id="res2">-</div></div><div class="metric"><div class="k">m³/s</div><div class="v" id="res3">-</div></div>
+          </div>
+        </section>
 
-<p>
-Convert airflow rate from cubic feet per minute (CFM)
-to cubic meters per hour (m³/hr). This conversion is
-commonly used in HVAC engineering, ventilation design,
-and industrial air systems.
-</p>
+        <section class="card section">
+          <div class="ad-slot">In-content ad placeholder<br/>Recommended: rectangle / responsive unit</div>
+        </section>
 
-<h2>Quick conversion formula</h2>
+        <section class="card section" id="formula">
+          <h2>Formula</h2>
+          <div class="formula">m³/hr = CFM × 1.6990108
+m³/s = CFM × 0.00047194745</div>
+        </section>
 
-<p>
-1 CFM = 1.699 m³/hr
-</p>
+        <section class="card section" id="example">
+          <h2>Example</h2>
+          <p>If flow = 1000 CFM, then m³/hr ≈ 1699.01 m³/hr.</p>
+        </section>
+      </main>
 
-<h3>Related engineering tools</h3>
+      <aside class="sidebar">
+        <section class="card tool-menu">
+          <h3>All tools</h3>
+          <div class="menu-list">
+            <a class="" data-nav-link href="index.html">Home</a>
+<a class="" data-nav-link href="bar-to-psi.html">bar → psi</a>
+<a class="" data-nav-link href="psi-to-bar.html">psi → bar</a>
+<a class="" data-nav-link href="m-head-to-bar.html">m head → bar</a>
+<a class="active" data-nav-link href="cfm-to-m3hr.html">CFM → m³/hr</a>
+<a class="" data-nav-link href="pump-power.html">Pump power</a>
+<a class="" data-nav-link href="pump-head-to-pressure.html">Head → pressure</a>
+<a class="" data-nav-link href="npsh.html">NPSH</a>
+<a class="" data-nav-link href="pressure-drop.html">Pressure drop</a>
+<a class="" data-nav-link href="reynolds-number.html">Reynolds</a>
+<a class="" data-nav-link href="torque.html">Torque</a>
+          </div>
+        </section>
+        <section class="card section" style="padding:18px">
+          <div class="ad-slot tall">Sidebar ad placeholder<br/>Recommended: 300 × 250 / 300 × 600</div>
+        </section>
+      </aside>
+    </div>
+  </section>
 
-<ul>
-<li><a href="pressure-drop.html">Pressure Drop Calculator</a></li>
-<li><a href="reynolds-number.html">Reynolds Number Calculator</a></li>
-<li><a href="pump-power.html">Pump Power Calculator</a></li>
-</ul>
-
-<h2>Online calculator</h2>
-
-<input id="cfm" type="number" value="100">
-<button onclick="calcCFM()">Calculate</button>
-
-<div id="result"></div>
-
-<h2>Formula</h2>
-
-<p>
-m³/hr = CFM × 1.699
-</p>
-
-<h2>Example</h2>
-
-<p>
-If airflow = 100 CFM, then m³/hr ≈ 169.9 m³/hr.
-</p>
-
-<script src="app.js"></script>
-
+  <footer class="foot">
+    <div class="container">
+      Engineering tools starter site with dedicated ad placeholders and separate SEO-friendly pages.
+    </div>
+  </footer>
+  <script src="app.js"></script>
 </body>
 </html>
