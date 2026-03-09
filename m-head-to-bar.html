@@ -1,58 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>m head to bar Converter | Engineering Calculator</title>
-<meta name="description" content="Convert meters of head to pressure in bar using an engineering calculator.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>m head to bar Converter | Engineering Calculator</title>
+  <meta name="description" content="Convert meter of head to pressure in bar using an engineering calculator." />
 
-<meta name="robots" content="index, follow">
-<link rel="stylesheet" href="styles.css">
+  <meta name="robots" content="index, follow">
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
 
-<h1>Meter of Head to Bar Converter</h1>
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-badge">RT</span>
+      <span>Rotating Tools</span>
+    </a>
+    <button class="nav-toggle" onclick="toggleNav()">Menu</button>
 
-<p>
-Convert pressure head (meters of liquid column) to bar.
-This conversion is commonly used in pump engineering,
-hydraulic systems, and fluid mechanics calculations.
-</p>
+    <nav class="nav-links">
+      <a data-nav-link href="index.html">Home</a>
+      <a data-nav-link href="bar-to-psi.html">bar → psi</a>
+      <a data-nav-link href="psi-to-bar.html">psi → bar</a>
+      <a data-nav-link href="m-head-to-bar.html">m head → bar</a>
+      <a data-nav-link href="cfm-to-m3hr.html">CFM → m³/hr</a>
+      <a data-nav-link href="pump-power.html">Pump power</a>
+      <a data-nav-link href="pump-head-to-pressure.html">Head → pressure</a>
+      <a data-nav-link href="npsh.html">NPSH</a>
+      <a data-nav-link href="pressure-drop.html">Pressure drop</a>
+      <a data-nav-link href="reynolds-number.html">Reynolds</a>
+      <a data-nav-link href="torque.html">Torque</a>
+    </nav>
+  </div>
+</header>
 
-<h2>Quick conversion formula</h2>
+<section class="hero">
+  <div class="container hero-grid">
 
-<p>
-1 meter head ≈ 0.0980665 bar (for water)
-</p>
+    <div class="card hero-main">
 
-<h3>Related engineering tools</h3>
+      <div class="badges">
+        <span class="badge">Engineering tool</span>
+        <span class="badge">SEO-ready page</span>
+        <span class="badge">Ad-friendly layout</span>
+      </div>
 
-<ul>
-<li><a href="bar-to-psi.html">Bar to PSI Converter</a></li>
-<li><a href="pump-power.html">Pump Power Calculator</a></li>
-<li><a href="pressure-drop.html">Pressure Drop Calculator</a></li>
-<li><a href="reynolds-number.html">Reynolds Number Calculator</a></li>
-</ul>
+      <h1>meter of head to bar converter</h1>
 
-<h2>Online calculator</h2>
+      <p>
+        Convert pressure head (meters of liquid column) to bar.
+        This conversion is commonly used in pump engineering,
+        hydraulic systems, and fluid mechanics calculations.
+      </p>
 
-<input id="head" type="number" value="10">
-<button onclick="calcHeadToBar()">Calculate</button>
+      <!-- แทนที่ 3 box KPI -->
 
-<div id="result"></div>
+      <section style="margin-top:20px">
 
-<h2>Formula</h2>
+        <h2>Meter of Head to Bar Converter</h2>
 
-<p>
-Pressure (bar) = head (m) × 0.0980665
-</p>
+        <p>
+          This engineering calculator converts meters of liquid head
+          into pressure in bar. It is widely used in centrifugal pump
+          calculations, piping design, and hydraulic engineering.
+        </p>
 
-<h2>Example</h2>
+        <h3>Quick conversion formula</h3>
 
-<p>
-If head = 10 m, pressure ≈ 0.98 bar.
-</p>
+        <p>
+          1 meter head ≈ 0.0980665 bar (for water)
+        </p>
+
+        <h3>Related engineering tools</h3>
+
+        <ul>
+          <li><a href="bar-to-psi.html">Bar to PSI Converter</a></li>
+          <li><a href="pump-power.html">Pump Power Calculator</a></li>
+          <li><a href="pressure-drop.html">Pressure Drop Calculator</a></li>
+          <li><a href="reynolds-number.html">Reynolds Number Calculator</a></li>
+        </ul>
+
+      </section>
+
+    </div>
+
+
+    <aside class="card hero-side">
+
+      <div class="ad-slot">
+        Hero banner placeholder<br/>
+        Recommended: responsive display ad
+      </div>
+
+      <div class="side-list">
+        <a href="#calculator">Go to calculator</a>
+        <a href="#formula">View formula</a>
+        <a href="#example">See worked example</a>
+      </div>
+
+    </aside>
+
+  </div>
+</section>
+
+<section class="page">
+  <div class="container page-grid">
+
+    <main class="content">
+
+      <section class="card section" id="calculator">
+
+        <h2>Online calculator</h2>
+
+        <div class="grid-2">
+
+          <div class="field">
+            <label for="head">Head (m)</label>
+            <input id="head" type="number" step="any" value="10" />
+          </div>
+
+          <div class="field">
+            <label>Engineering note</label>
+            <input value="Conversion assumes water density" readonly />
+          </div>
+
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" onclick="calcHeadToBar()">Calculate</button>
+        </div>
+
+        <div class="result-grid" style="margin-top:12px">
+
+          <div class="metric">
+            <div class="k">bar</div>
+            <div class="v" id="res1">-</div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="card section">
+        <div class="ad-slot">
+          In-content ad placeholder
+        </div>
+      </section>
+
+      <section class="card section" id="formula">
+
+        <h2>Formula</h2>
+
+        <div class="formula">
+          Pressure (bar) = head (m) × 0.0980665
+        </div>
+
+      </section>
+
+      <section class="card section" id="example">
+
+        <h2>Example</h2>
+
+        <p>
+          If head = 10 m, pressure ≈ 0.98 bar.
+        </p>
+
+      </section>
+
+    </main>
+
+  </div>
+</section>
 
 <script src="app.js"></script>
 
