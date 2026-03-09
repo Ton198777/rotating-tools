@@ -145,3 +145,19 @@ function calcTorque(){
   setText('res3', format((2*Math.PI*rpm/60),3,' rad/s'));
 }
 document.addEventListener('DOMContentLoaded', setActiveLinks);
+function calcHeadToBar(){
+
+  const h = parseFloat(document.getElementById("head").value);
+  const rho = parseFloat(document.getElementById("density").value);
+
+  const g = 9.80665;
+
+  const bar = (rho * g * h) / 100000;
+  const kpa = bar * 100;
+  const mpa = bar / 10;
+
+  document.getElementById("res1").textContent = bar.toFixed(5);
+  document.getElementById("res2").textContent = kpa.toFixed(2);
+  document.getElementById("res3").textContent = mpa.toFixed(5);
+
+}
