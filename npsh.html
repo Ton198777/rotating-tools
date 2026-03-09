@@ -89,8 +89,25 @@
 
         <section class="card section" id="formula">
           <h2>Formula</h2>
-          <div class="formula">NPSHa = (Pabs - Pvapor) / (ρg) + z - hf
-with pressure converted into meters of the pumped liquid</div>
+          <div class="formula">NPSHa = ((Pabs - Pvapor) × 10.197 / SG) + z - hf</div>
+          <p><strong>Variable description:</strong></p>
+  <ul>
+    <li><strong>NPSHa</strong> = Net Positive Suction Head Available, unit: m</li>
+    <li><strong>Pabs</strong> = Absolute pressure at liquid surface or suction vessel, unit: bar(a)</li>
+    <li><strong>Pvapor</strong> = Vapor pressure of liquid at pumping temperature, unit: bar(a)</li>
+    <li><strong>SG</strong> = Specific gravity of liquid, dimensionless</li>
+    <li><strong>z</strong> = Static head, unit: m</li>
+    <li><strong>hf</strong> = Friction loss in suction line, unit: m</li>
+  </ul>
+
+  <p><strong>Sign convention for z:</strong></p>
+  <ul>
+    <li>Use positive value when liquid level is above pump centerline</li>
+    <li>Use negative value when pump centerline is above liquid level</li>
+  </ul>
+
+  <p><strong>Engineering note:</strong> This equation is valid when Pabs is the pressure at the liquid surface or inside the suction vessel, not the pump suction nozzle pressure.</p>
+</div>
         </section>
 
         <section class="card section" id="example">
