@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
   <header class="topbar">
     <div class="container topbar-inner">
       <a href="index.html" class="brand">
@@ -18,115 +19,227 @@
         <span>Rotating Tools</span>
       </a>
       <button class="nav-toggle" onclick="toggleNav()">Menu</button>
+
       <nav class="nav-links">
         <a data-nav-link href="index.html">Home</a>
-<a data-nav-link href="bar-to-psi.html">bar → psi</a>
-<a data-nav-link href="psi-to-bar.html">psi → bar</a>
-<a data-nav-link href="m-head-to-bar.html">m head → bar</a>
-<a data-nav-link href="cfm-to-m3hr.html">CFM → m³/hr</a>
-<a data-nav-link href="pump-power.html">Pump power</a>
-<a data-nav-link href="pump-head-to-pressure.html">Head → pressure</a>
-<a data-nav-link href="npsh.html">NPSH</a>
-<a data-nav-link href="pressure-drop.html">Pressure drop</a>
-<a data-nav-link href="reynolds-number.html">Reynolds</a>
-<a data-nav-link href="torque.html">Torque</a>
+        <a data-nav-link href="bar-to-psi.html">bar → psi</a>
+        <a data-nav-link href="psi-to-bar.html">psi → bar</a>
+        <a data-nav-link href="m-head-to-bar.html">m head → bar</a>
+        <a data-nav-link href="cfm-to-m3hr.html">CFM → m³/hr</a>
+        <a data-nav-link href="pump-power.html">Pump power</a>
+        <a data-nav-link href="pump-head-to-pressure.html">Head → pressure</a>
+        <a data-nav-link href="npsh.html">NPSH</a>
+        <a data-nav-link href="pressure-drop.html">Pressure drop</a>
+        <a data-nav-link href="reynolds-number.html">Reynolds</a>
+        <a data-nav-link href="torque.html">Torque</a>
       </nav>
     </div>
   </header>
-  
+
+
   <section class="hero">
     <div class="container hero-grid">
+
       <div class="card hero-main">
+
         <div class="badges">
           <span class="badge">Engineering tool</span>
           <span class="badge">SEO-ready page</span>
           <span class="badge">Ad-friendly layout</span>
         </div>
+
         <h1>bar to psi converter</h1>
-        <p>Convert pressure from bar to psi, kPa, and MPa with a dedicated engineering-style page.</p>
-        <div class="kpis">
-          <div class="kpi"><strong>1 page</strong><span>1 keyword focus</span></div>
-          <div class="kpi"><strong>3 zones</strong><span>Ads placement ready</span></div>
-          <div class="kpi"><strong>Fast</strong><span>Static HTML + JS</span></div>
-        </div>
+
+        <p>
+          Convert pressure from bar to psi, kPa, and MPa with a dedicated engineering-style page.
+        </p>
+
+        <!-- REPLACEMENT CONTENT (แทน 3 BOX เดิม) -->
+
+        <section style="margin-top:20px">
+
+          <h2>Bar to PSI Converter</h2>
+
+          <p>
+            This engineering calculator allows you to quickly convert pressure from bar to psi,
+            kPa, and MPa. It is useful for pump systems, compressor calculations,
+            piping engineering, and general pressure unit conversions.
+          </p>
+
+          <h3>Quick conversion formula</h3>
+
+          <p>
+            1 bar = 14.5038 psi
+          </p>
+
+          <h3>Related engineering tools</h3>
+
+          <ul>
+            <li><a href="psi-to-bar.html">PSI to Bar Converter</a></li>
+            <li><a href="pump-power.html">Pump Power Calculator</a></li>
+            <li><a href="pressure-drop.html">Pressure Drop Calculator</a></li>
+            <li><a href="reynolds-number.html">Reynolds Number Calculator</a></li>
+          </ul>
+
+        </section>
+
       </div>
+
+
       <aside class="card hero-side">
-        <div class="ad-slot">Hero banner placeholder<br/>Recommended: responsive display ad</div>
+
+        <div class="ad-slot">
+          Hero banner placeholder<br/>
+          Recommended: responsive display ad
+        </div>
+
         <div class="side-list">
           <a href="#calculator">Go to calculator</a>
           <a href="#formula">View formula</a>
           <a href="#example">See worked example</a>
         </div>
+
       </aside>
+
     </div>
   </section>
+
 
   <section class="page">
     <div class="container page-grid">
+
       <main class="content">
+
         <section class="card section" id="calculator">
+
           <h2>Online calculator</h2>
+
           <div class="grid-2">
-            
-            <div class="field"><label for="bar">Pressure (bar)</label><input id="bar" type="number" step="any" value="5" /></div>
-            <div class="field"><label>Engineering note</label><input value="Gauge or absolute must be treated consistently" readonly /></div>
-            
+
+            <div class="field">
+              <label for="bar">Pressure (bar)</label>
+              <input id="bar" type="number" step="any" value="5" />
+            </div>
+
+            <div class="field">
+              <label>Engineering note</label>
+              <input value="Gauge or absolute must be treated consistently" readonly />
+            </div>
+
           </div>
+
           <div class="actions">
             <button class="btn btn-primary" onclick="calcBarToPsi()">Calculate</button>
           </div>
+
           <div class="notice" id="notice"></div>
+
           <div class="result-grid" style="margin-top:12px">
-            <div class="metric"><div class="k">psi</div><div class="v" id="res1">-</div></div><div class="metric"><div class="k">kPa</div><div class="v" id="res2">-</div></div><div class="metric"><div class="k">MPa</div><div class="v" id="res3">-</div></div>
+
+            <div class="metric">
+              <div class="k">psi</div>
+              <div class="v" id="res1">-</div>
+            </div>
+
+            <div class="metric">
+              <div class="k">kPa</div>
+              <div class="v" id="res2">-</div>
+            </div>
+
+            <div class="metric">
+              <div class="k">MPa</div>
+              <div class="v" id="res3">-</div>
+            </div>
+
           </div>
+
         </section>
+
 
         <section class="card section">
-          <div class="ad-slot">In-content ad placeholder<br/>Recommended: rectangle / responsive unit</div>
-        </section>
-
-        <section class="card section" id="formula">
-          <h2>Formula</h2>
-          <div class="formula">psi = bar × 14.5037738,
-kPa = bar × 100,
-MPa = bar × 0.1</div>
-        </section>
-
-        <section class="card section" id="example">
-          <h2>Example</h2>
-          <p>If pressure = 5 bar, then psi ≈ 72.519 psi, kPa = 500 kPa, and MPa = 0.5 MPa.</p>
-        </section>
-      </main>
-
-      <aside class="sidebar">
-        <section class="card tool-menu">
-          <h3>All tools</h3>
-          <div class="menu-list">
-            <a class="" data-nav-link href="index.html">Home</a>
-<a class="active" data-nav-link href="bar-to-psi.html">bar → psi</a>
-<a class="" data-nav-link href="psi-to-bar.html">psi → bar</a>
-<a class="" data-nav-link href="m-head-to-bar.html">m head → bar</a>
-<a class="" data-nav-link href="cfm-to-m3hr.html">CFM → m³/hr</a>
-<a class="" data-nav-link href="pump-power.html">Pump power</a>
-<a class="" data-nav-link href="pump-head-to-pressure.html">Head → pressure</a>
-<a class="" data-nav-link href="npsh.html">NPSH</a>
-<a class="" data-nav-link href="pressure-drop.html">Pressure drop</a>
-<a class="" data-nav-link href="reynolds-number.html">Reynolds</a>
-<a class="" data-nav-link href="torque.html">Torque</a>
+          <div class="ad-slot">
+            In-content ad placeholder<br/>
+            Recommended: rectangle / responsive unit
           </div>
         </section>
-        <section class="card section" style="padding:18px">
-          <div class="ad-slot tall">Sidebar ad placeholder<br/>Recommended: 300 × 250 / 300 × 600</div>
+
+
+        <section class="card section" id="formula">
+
+          <h2>Formula</h2>
+
+          <div class="formula">
+            psi = bar × 14.5037738,
+            kPa = bar × 100,
+            MPa = bar × 0.1
+          </div>
+
         </section>
+
+
+        <section class="card section" id="example">
+
+          <h2>Example</h2>
+
+          <p>
+            If pressure = 5 bar, then psi ≈ 72.519 psi,
+            kPa = 500 kPa,
+            and MPa = 0.5 MPa.
+          </p>
+
+        </section>
+
+      </main>
+
+
+      <aside class="sidebar">
+
+        <section class="card tool-menu">
+
+          <h3>All tools</h3>
+
+          <div class="menu-list">
+
+            <a class="" data-nav-link href="index.html">Home</a>
+            <a class="active" data-nav-link href="bar-to-psi.html">bar → psi</a>
+            <a class="" data-nav-link href="psi-to-bar.html">psi → bar</a>
+            <a class="" data-nav-link href="m-head-to-bar.html">m head → bar</a>
+            <a class="" data-nav-link href="cfm-to-m3hr.html">CFM → m³/hr</a>
+            <a class="" data-nav-link href="pump-power.html">Pump power</a>
+            <a class="" data-nav-link href="pump-head-to-pressure.html">Head → pressure</a>
+            <a class="" data-nav-link href="npsh.html">NPSH</a>
+            <a class="" data-nav-link href="pressure-drop.html">Pressure drop</a>
+            <a class="" data-nav-link href="reynolds-number.html">Reynolds</a>
+            <a class="" data-nav-link href="torque.html">Torque</a>
+
+          </div>
+
+        </section>
+
+
+        <section class="card section" style="padding:18px">
+
+          <div class="ad-slot tall">
+            Sidebar ad placeholder<br/>
+            Recommended: 300 × 250 / 300 × 600
+          </div>
+
+        </section>
+
       </aside>
+
     </div>
   </section>
+
 
   <footer class="foot">
     <div class="container">
       Engineering tools starter site with dedicated ad placeholders and separate SEO-friendly pages.
     </div>
   </footer>
+
+
   <script src="app.js"></script>
+
 </body>
 </html>
